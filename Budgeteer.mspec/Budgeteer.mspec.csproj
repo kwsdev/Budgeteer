@@ -64,6 +64,8 @@
     <Compile Include="Import\Parsers\for DateParser\given\a_DateParser.cs" />
     <Compile Include="Import\Parsers\for DateParser\when_passing_an_invalid_date_string.cs" />
     <Compile Include="Import\Parsers\for DateParser\when_passing_a_valid_date_string.cs" />
+    <Compile Include="Import\Parsers\for MoneyParser\given\a_MoneyParser.cs" />
+    <Compile Include="Import\Parsers\for MoneyParser\when_passing_a_valid_money_string.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -75,6 +77,7 @@
       <Name>Budgeteer</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
