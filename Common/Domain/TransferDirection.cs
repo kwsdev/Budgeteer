@@ -1,4 +1,4 @@
-﻿namespace Budgeteer.Domain
+﻿namespace Common.Domain
 {
     public enum TransferDirection
     {

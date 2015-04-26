@@ -1,6 +1,6 @@
 ﻿using System.Collections.ObjectModel;
 
-namespace Budgeteer.Domain
+namespace Common.Domain
 {
     public class AccountHistory
     {

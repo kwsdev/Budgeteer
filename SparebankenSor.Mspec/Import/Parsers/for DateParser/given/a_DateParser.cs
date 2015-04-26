@@ -1,8 +1,8 @@
 ﻿using System;
-using Budgeteer.Import.Parsers;
 using Machine.Specifications;
+using SparebankenSor.Import.Parsers;
 
-namespace Budgeteer.mspec.Import.Parsers.for_DateParser.given
+namespace SparebankenSor.Mspec.Import.Parsers.for_DateParser.given
 {
     public class a_DateParser
     {
@@ -11,9 +11,6 @@ namespace Budgeteer.mspec.Import.Parsers.for_DateParser.given
         public static string inputValue;
         public static DateTime expected;
 
-        private Establish context = () =>
-        {
-            Parser = new DateParser();
-        };
+        private Establish context = () => { Parser = new DateParser(); };
     }
 }

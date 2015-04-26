@@ -1,6 +1,6 @@
 using System;
 
-namespace Budgeteer.Import.Parsers
+namespace SparebankenSor.Import.Parsers
 {
     public class DateParser
     {

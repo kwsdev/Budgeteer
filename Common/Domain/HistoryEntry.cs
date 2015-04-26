@@ -1,7 +1,7 @@
 ﻿using System;
-using Budgeteer.Domain.Currency;
+using Common.Domain.Currency;
 
-namespace Budgeteer.Domain
+namespace Common.Domain
 {
     public class HistoryEntry
     {

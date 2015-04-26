@@ -1,6 +1,6 @@
-using Budgeteer.Domain.Currency;
+using Common.Domain.Currency;
 
-namespace Budgeteer.Import.Parsers
+namespace SparebankenSor.Import.Parsers
 {
     public class MoneyParser
     {

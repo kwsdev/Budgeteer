@@ -1,10 +1,11 @@
 ﻿using System;
 using Machine.Specifications;
+using SparebankenSor.Mspec.Import.Parsers.for_DateParser.given;
 
-namespace Budgeteer.mspec.Import.Parsers.for_DateParser
+namespace SparebankenSor.Mspec.Import.Parsers.for_DateParser
 {
     [Subject("Trying to parse a string that contains a valid date")]
-    public class when_passing_a_valid_date_string : given.a_DateParser
+    public class when_passing_a_valid_date_string : a_DateParser
     {
         private Establish context = () =>
         {
@@ -13,7 +14,6 @@ namespace Budgeteer.mspec.Import.Parsers.for_DateParser
         };
 
         private Because of = () => result = Parser.ParseDate(inputValue);
-
         private It should_be_a_valid_date = () => result.ShouldEqual(expected);
     }
 }

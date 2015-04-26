@@ -1,6 +1,6 @@
 ﻿using System.IO;
-using Budgeteer.Domain;
-using Budgeteer.Import.Parsers;
+using Common.Domain;
+using SparebankenSor.Import.Parsers;
 
 namespace Budgeteer.Import.Importers
 {

@@ -3,8 +3,8 @@ using System.Linq;
 using System.Windows.Controls;
 using Budgeteer.History;
 using Budgeteer.Import.Importers;
-using Budgeteer.Import.Parsers;
 using Microsoft.Practices.Prism.Mvvm;
+using SparebankenSor.Import.Parsers;
 
 namespace Budgeteer.Frame
 {

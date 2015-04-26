@@ -94,10 +94,6 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Domain\AccountHistory.cs" />
-    <Compile Include="Domain\HistoryEntry.cs" />
-    <Compile Include="Domain\Currency\Money.cs" />
-    <Compile Include="Domain\TransferDirection.cs" />
     <Compile Include="Frame\FrameView.xaml.cs">
       <DependentUpon>FrameView.xaml</DependentUpon>
     </Compile>
@@ -108,10 +104,6 @@
     <Compile Include="History\HistoryViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Import\Parsers\DateParser.cs" />
-    <Compile Include="Import\Parsers\DirectionParser.cs" />
-    <Compile Include="Import\Importers\CsvImporter.cs" />
-    <Compile Include="Import\Parsers\MoneyParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -138,6 +130,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{35FCF059-6F59-4921-8F7B-2348D096DFC5}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SparebankenSor\SparebankenSor.csproj">
+      <Project>{2E1B0210-DD32-42AF-9B88-F79B0907A864}</Project>
+      <Name>SparebankenSor</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />

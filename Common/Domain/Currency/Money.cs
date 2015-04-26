@@ -1,4 +1,4 @@
-﻿namespace Budgeteer.Domain.Currency
+﻿namespace Common.Domain.Currency
 {
     public class Money
     {

@@ -1,6 +1,6 @@
-using Budgeteer.Domain;
+using Common.Domain;
 
-namespace Budgeteer.Import.Parsers
+namespace SparebankenSor.Import.Parsers
 {
     public class DirectionParser
     {

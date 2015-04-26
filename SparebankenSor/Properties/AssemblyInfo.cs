@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 
-[assembly: AssemblyTitle("Budgeteer.mspec")]
+[assembly: AssemblyTitle("SparebankenSor")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Budgeteer.mspec")]
+[assembly: AssemblyProduct("SparebankenSor")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -22,7 +22,7 @@ using System.Runtime.InteropServices;
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
 
-[assembly: Guid("819353f6-6916-45ae-9072-d501f80628f1")]
+[assembly: Guid("394d25e0-bed8-4fcc-82ef-67e34b174fd1")]
 
 // Version information for an assembly consists of the following four values:
 //

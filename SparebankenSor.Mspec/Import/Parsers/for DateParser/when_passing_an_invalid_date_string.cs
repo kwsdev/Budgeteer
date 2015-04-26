@@ -1,8 +1,8 @@
 ﻿using System;
-using Budgeteer.mspec.Import.Parsers.for_DateParser.given;
 using Machine.Specifications;
+using SparebankenSor.Mspec.Import.Parsers.for_DateParser.given;
 
-namespace Budgeteer.mspec.Import.Parsers.for_DateParser
+namespace SparebankenSor.Mspec.Import.Parsers.for_DateParser
 {
     internal class when_passing_an_invalid_date_string : a_DateParser
     {

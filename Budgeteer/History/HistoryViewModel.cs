@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Input;
-using Budgeteer.Domain;
 using Budgeteer.Import.Importers;
+using Common.Domain;
 using Microsoft.Practices.Prism.Commands;
 using Microsoft.Practices.Prism.Mvvm;
 using Microsoft.Win32;
