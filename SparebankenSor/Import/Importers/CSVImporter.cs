@@ -2,7 +2,7 @@
 using Common.Domain;
 using SparebankenSor.Import.Parsers;
 
-namespace Budgeteer.Import.Importers
+namespace SparebankenSor.Import.Importers
 {
     public class CsvImporter
     {

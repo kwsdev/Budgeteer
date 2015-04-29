@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Windows.Input;
-using Budgeteer.Import.Importers;
 using Common.Domain;
 using Microsoft.Practices.Prism.Commands;
 using Microsoft.Practices.Prism.Mvvm;
 using Microsoft.Win32;
+using SparebankenSor.Import.Importers;
 
 namespace Budgeteer.History
 {
