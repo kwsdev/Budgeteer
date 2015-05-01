@@ -60,6 +60,10 @@
     <Reference Include="Microsoft.Practices.Prism.SharedInterfaces">
       <HintPath>..\packages\Prism.Mvvm.1.0.0\lib\net45\Microsoft.Practices.Prism.SharedInterfaces.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Practices.Prism.UnityExtensions, Version=5.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Prism.UnityExtensions.5.0.1\lib\NET45\Microsoft.Practices.Prism.UnityExtensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.Practices.ServiceLocation">
       <HintPath>..\packages\CommonServiceLocator.1.2\lib\portable-windows8+net40+sl5+windowsphone8\Microsoft.Practices.ServiceLocation.dll</HintPath>
     </Reference>
@@ -98,24 +102,24 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Modules\History\HistoryView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Bootstrapper.cs" />
     <Compile Include="Frame\FrameView.xaml.cs">
       <DependentUpon>FrameView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Frame\FrameViewModel.cs" />
-    <Compile Include="Modules\History\HistoryView.xaml.cs">
-      <DependentUpon>HistoryView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Modules\History\HistoryViewModel.cs" />
+    <Page Include="PrismAppShell.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PrismAppShell.xaml.cs">
+      <DependentUpon>PrismAppShell.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -144,14 +148,21 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BankModules\SparebankenSor\SparebankenSor.csproj">
+      <Project>{2e1b0210-dd32-42af-9b88-f79b0907a864}</Project>
+      <Name>SparebankenSor</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Common\Common.csproj">
       <Project>{35FCF059-6F59-4921-8F7B-2348D096DFC5}</Project>
       <Name>Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\SparebankenSor\SparebankenSor.csproj">
-      <Project>{2E1B0210-DD32-42AF-9B88-F79B0907A864}</Project>
-      <Name>SparebankenSor</Name>
+    <ProjectReference Include="..\Features\History\History.csproj">
+      <Project>{2a362ff5-c990-476e-982d-81e038394cf8}</Project>
+      <Name>History</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Modules\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />

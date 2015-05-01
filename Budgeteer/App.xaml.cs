@@ -11,9 +11,9 @@ namespace Budgeteer
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
-            var culture = new CultureInfo("nb-NO");
-            Current.Dispatcher.Thread.CurrentCulture = culture;
-            Current.Dispatcher.Thread.CurrentUICulture = culture;
+
+            var bootstrapper = new Bootstrapper();
+            bootstrapper.Run();
         }
     }
 }
