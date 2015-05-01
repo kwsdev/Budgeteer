@@ -6,7 +6,7 @@ using Microsoft.Practices.Prism.Mvvm;
 using Microsoft.Win32;
 using SparebankenSor.Import.Importers;
 
-namespace Budgeteer.History
+namespace Budgeteer.Modules.History
 {
     public class HistoryViewModel : BindableBase
     {

@@ -86,7 +86,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="History\HistoryView.xaml">
+    <Page Include="Modules\History\HistoryView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -98,10 +98,10 @@
       <DependentUpon>FrameView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Frame\FrameViewModel.cs" />
-    <Compile Include="History\HistoryView.xaml.cs">
+    <Compile Include="Modules\History\HistoryView.xaml.cs">
       <DependentUpon>HistoryView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="History\HistoryViewModel.cs" />
+    <Compile Include="Modules\History\HistoryViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">

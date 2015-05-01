@@ -1,6 +1,6 @@
 ﻿using System.Windows.Controls;
 
-namespace Budgeteer.History
+namespace Budgeteer.Modules.History
 {
     /// <summary>
     ///     Interaction logic for HistoryView.xaml

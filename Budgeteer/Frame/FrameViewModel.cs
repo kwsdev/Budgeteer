@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Controls;
-using Budgeteer.History;
+using Budgeteer.Modules.History;
 using Microsoft.Practices.Prism.Mvvm;
 using SparebankenSor.Import.Importers;
 using SparebankenSor.Import.Parsers;
