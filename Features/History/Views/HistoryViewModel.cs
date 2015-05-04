@@ -1,26 +1,16 @@
-﻿using System;
-using System.Windows.Input;
-using Common.Domain;
-using Microsoft.Practices.Prism.Commands;
+﻿using Common.Domain;
 using Microsoft.Practices.Prism.Mvvm;
-using Microsoft.Win32;
-using SparebankenSor.Import.Importers;
 
 namespace Features.History.Views
 {
     public class HistoryViewModel : BindableBase
     {
-        private CsvImporter _csvImporter;
         private AccountHistory _history;
-        private ICommand _importCommand;
-
-        public HistoryViewModel()
-        {
-        }
 
         public AccountHistory History
         {
             get { return _history; }
+
 
             private set
             {
@@ -34,30 +24,9 @@ namespace Features.History.Views
             }
         }
 
-        public ICommand ImportCommand
-        {
-            get { return _importCommand ?? (_importCommand = new DelegateCommand(Import)); }
-        }
-
-        public void Load(AccountHistory history, CsvImporter csvImporter)
+        public void Load(AccountHistory history)
         {
             History = history;
-            _csvImporter = csvImporter;
-        }
-
-        private void Import()
-        {
-            var fileDialog = new OpenFileDialog();
-
-            fileDialog.InitialDirectory = Environment.CurrentDirectory;
-
-            var result = fileDialog.ShowDialog();
-
-            if (result == true)
-            {
-                var path = fileDialog.FileName;
-                History = _csvImporter.ImportAccountHistoryFromFile(path);
-            }
         }
     }
 }

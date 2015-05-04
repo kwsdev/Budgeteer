@@ -15,8 +15,8 @@ namespace Features.History
 
         public void Initialize()
         {
-            this._viewRegistry.RegisterViewWithRegion("FeatureListRegion", typeof(HistoryButtonView));
-            this._viewRegistry.RegisterViewWithRegion("ContentRegion", typeof(HistoryView));
+            _viewRegistry.RegisterViewWithRegion("FeatureListRegion", typeof(HistoryButtonView));
+            _viewRegistry.RegisterViewWithRegion("ContentRegion", typeof(HistoryView));
         }
     }
 }

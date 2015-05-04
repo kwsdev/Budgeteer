@@ -26,6 +26,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Features", "Features", "{BD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "History", "Features\History\History.csproj", "{2A362FF5-C990-476E-982D-81E038394CF8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Import", "Import\Import.csproj", "{2EF75C4D-E518-458A-92EA-0417A1ACF1BC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -56,6 +58,10 @@ Global
 		{2A362FF5-C990-476E-982D-81E038394CF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2A362FF5-C990-476E-982D-81E038394CF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2A362FF5-C990-476E-982D-81E038394CF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EF75C4D-E518-458A-92EA-0417A1ACF1BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EF75C4D-E518-458A-92EA-0417A1ACF1BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EF75C4D-E518-458A-92EA-0417A1ACF1BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EF75C4D-E518-458A-92EA-0417A1ACF1BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
