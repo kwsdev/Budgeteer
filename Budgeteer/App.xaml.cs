@@ -1,5 +1,8 @@
-﻿using System.Globalization;
+﻿using System;
+using System.Globalization;
+using System.Reflection;
 using System.Windows;
+using Microsoft.Practices.Prism.Mvvm;
 
 namespace Budgeteer
 {
@@ -11,7 +14,7 @@ namespace Budgeteer
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
-
+            
             var bootstrapper = new Bootstrapper();
             bootstrapper.Run();
         }

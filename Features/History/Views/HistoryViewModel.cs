@@ -14,6 +14,10 @@ namespace Features.History.Views
         private AccountHistory _history;
         private ICommand _importCommand;
 
+        public HistoryViewModel()
+        {
+        }
+
         public AccountHistory History
         {
             get { return _history; }
