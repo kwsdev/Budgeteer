@@ -10,7 +10,6 @@ namespace SparebankenSor.Mspec.Import.Parsers.for_DateParser.given
         public static DateTime result;
         public static string inputValue;
         public static DateTime expected;
-
         private Establish context = () => { Parser = new DateParser(); };
     }
 }

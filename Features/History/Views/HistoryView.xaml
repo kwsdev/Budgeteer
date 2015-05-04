@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:prism="clr-namespace:Microsoft.Practices.Prism.Mvvm;assembly=Microsoft.Practices.Prism.Mvvm.Desktop" 
+             xmlns:prism="clr-namespace:Microsoft.Practices.Prism.Mvvm;assembly=Microsoft.Practices.Prism.Mvvm.Desktop"
              prism:ViewModelLocator.AutoWireViewModel="True"
              xmlns:views="clr-namespace:Features.History.Views"
              mc:Ignorable="d"
@@ -12,12 +12,7 @@
         <views:HistoryViewModel />
     </UserControl.DataContext>-->
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
-        <Button Command="{Binding ImportCommand}" Content="Import csv" Width="80" HorizontalAlignment="Left" />
-        <DataGrid ItemsSource="{Binding History.Entries}" Grid.Row="1" AutoGenerateColumns="False">
+        <DataGrid ItemsSource="{Binding History.Entries}" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Date}" Header="Date" Width="120" />
                 <DataGridTextColumn Binding="{Binding Direction}" Header="Withdrawal/Deposit" Width="125" />

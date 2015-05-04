@@ -1,16 +1,16 @@
 ﻿using Common.Regions;
-using Features.History.Views;
+using Import.Views;
 using Microsoft.Practices.Prism.Modularity;
 using Microsoft.Practices.Prism.Regions;
 
-namespace Features.History
+namespace Import
 {
-    public class HistoryModule : IModule
+    public class ImportModule : IModule
     {
         private readonly IRegionManager _regionManager;
         private readonly IRegionViewRegistry _viewRegistry;
 
-        public HistoryModule(IRegionViewRegistry viewRegistry, IRegionManager regionManager)
+        public ImportModule(IRegionViewRegistry viewRegistry, IRegionManager regionManager)
         {
             _viewRegistry = viewRegistry;
             _regionManager = regionManager;
@@ -18,8 +18,8 @@ namespace Features.History
 
         public void Initialize()
         {
-            _regionManager.AddToRegion(RegionNames.TabRegion, new HistoryTabItemView());
-            _viewRegistry.RegisterViewWithRegion(RegionNames.ContentRegion, typeof (HistoryView));
+            _regionManager.AddToRegion(RegionNames.TabRegion, new ImportTabItemView());
+            _viewRegistry.RegisterViewWithRegion(RegionNames.ContentRegion, typeof (ImportView));
         }
     }
 }

@@ -2,8 +2,9 @@
 using System.Globalization;
 using System.Reflection;
 using System.Windows;
-using Features.History;
 using Common.ExtensionMethods;
+using Features.History;
+using Import;
 using Microsoft.Practices.Prism.Modularity;
 using Microsoft.Practices.Prism.Mvvm;
 using Microsoft.Practices.Prism.UnityExtensions;
@@ -46,29 +47,25 @@ namespace Budgeteer
         {
             base.ConfigureModuleCatalog();
 
-            ModuleCatalog moduleCatalog = (ModuleCatalog) this.ModuleCatalog;
+            var moduleCatalog = (ModuleCatalog) ModuleCatalog;
 
-            moduleCatalog.AddModule(typeof(HistoryModule));
+            moduleCatalog.AddModule(typeof (HistoryModule));
+            moduleCatalog.AddModule(typeof (ImportModule));
         }
-
-
 
         private void ConfigureDependencyInjectionWithViewModelLocator()
         {
-            ViewModelLocationProvider.SetDefaultViewModelFactory((type) =>
-            {
-                return Container.Resolve(type);
-            });
+            ViewModelLocationProvider.SetDefaultViewModelFactory(type => { return Container.Resolve(type); });
         }
 
         private static void SetupViewModelLocatorConvention()
         {
-            ViewModelLocationProvider.SetDefaultViewTypeToViewModelTypeResolver((viewType) =>
+            ViewModelLocationProvider.SetDefaultViewTypeToViewModelTypeResolver(viewType =>
             {
                 var viewName = viewType.FullName;
                 var shortViewName = viewName.TrimEnd("View");
                 var viewAssemblyName = viewType.GetTypeInfo().Assembly.FullName;
-                var viewModelName = String.Format(CultureInfo.InvariantCulture, "{0}ViewModel, {1}", shortViewName,
+                var viewModelName = string.Format(CultureInfo.InvariantCulture, "{0}ViewModel, {1}", shortViewName,
                     viewAssemblyName);
                 return Type.GetType(viewModelName);
             });

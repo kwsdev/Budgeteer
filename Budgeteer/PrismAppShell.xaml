@@ -4,21 +4,22 @@
         xmlns:prism="http://www.codeplex.com/prism"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:regions="clr-namespace:Common.Regions;assembly=Budgeteer.Common"
         mc:Ignorable="d"
         d:DesignHeight="200" d:DesignWidth="800"
         Title="Budgeteer" Height="800" Width="1500">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
-        
-        <ContentControl Grid.Row="0" Grid.ColumnSpan="2" prism:RegionManager.RegionName="MenuRegion"/>
-        <TabControl Grid.Row="1" Grid.Column="0" prism:RegionManager.RegionName="TabRegion" TabStripPlacement="Left"/>
-        <ContentControl Grid.Row="1" Grid.Column="1" prism:RegionManager.RegionName="ContentRegion"/>
-        </Grid>
+
+        <ContentControl Grid.Row="0" Grid.ColumnSpan="2" prism:RegionManager.RegionName="{x:Static regions:RegionNames.MenuRegion}" />
+        <TabControl Grid.Row="1" Grid.Column="0" prism:RegionManager.RegionName="{x:Static regions:RegionNames.TabRegion}" TabStripPlacement="Left" />
+        <ContentControl Grid.Row="1" Grid.Column="1" prism:RegionManager.RegionName="{x:Static regions:RegionNames.ContentRegion}" />
+    </Grid>
 </Window>

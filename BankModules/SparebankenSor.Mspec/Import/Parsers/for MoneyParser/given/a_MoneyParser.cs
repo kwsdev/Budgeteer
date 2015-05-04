@@ -10,7 +10,6 @@ namespace SparebankenSor.Mspec.Import.Parsers.for_MoneyParser.given
         protected static Money Result;
         protected static Money Expected;
         protected static string InputValue;
-
         private Establish context = () => { Parser = new MoneyParser(); };
     }
 }

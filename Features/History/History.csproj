@@ -90,10 +90,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="HistoryModule.cs" />
-    <Compile Include="Views\HistoryButtonView.xaml.cs">
-      <DependentUpon>HistoryButtonView.xaml</DependentUpon>
+    <Compile Include="Views\HistoryTabItemView.xaml.cs">
+      <DependentUpon>HistoryTabItemView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\HistoryButtonViewModel.cs" />
+    <Compile Include="Views\HistoryTabItemViewModel.cs" />
     <Compile Include="Views\HistoryView.xaml.cs">
       <DependentUpon>HistoryView.xaml</DependentUpon>
     </Compile>
@@ -101,7 +101,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Views\HistoryButtonView.xaml">
+    <Page Include="Views\HistoryTabItemView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -114,10 +114,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\BankModules\SparebankenSor\SparebankenSor.csproj">
-      <Project>{2e1b0210-dd32-42af-9b88-f79b0907a864}</Project>
-      <Name>SparebankenSor</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\Common\Common.csproj">
       <Project>{35fcf059-6f59-4921-8f7b-2348d096dfc5}</Project>
       <Name>Common</Name>
