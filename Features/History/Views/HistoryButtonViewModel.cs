@@ -1,4 +1,5 @@
-﻿namespace Features.History.Views
+﻿
+namespace Features.History.Views
 {
     public class HistoryButtonViewModel
     {
