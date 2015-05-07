@@ -15,7 +15,7 @@
         <DataGrid ItemsSource="{Binding History.Entries}" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Date}" Header="Date" Width="120" />
-                <DataGridTextColumn Binding="{Binding Direction}" Header="Withdrawal/Deposit" Width="125" />
+                <DataGridTextColumn Binding="{Binding Direction}" Header="Withdrawal/Deposit" Width="175" />
                 <DataGridTextColumn Binding="{Binding Amount.Value}" Header="Amount" Width="100" />
                 <DataGridTextColumn Binding="{Binding Description}" Header="Description" Width="*" />
             </DataGrid.Columns>
