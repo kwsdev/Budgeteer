@@ -1,11 +1,11 @@
-﻿using System.Windows;
+﻿using MahApps.Metro.Controls;
 
 namespace Budgeteer
 {
     /// <summary>
     ///     Interaction logic for PrismAppShell.xaml
     /// </summary>
-    public partial class PrismAppShell : Window
+    public partial class PrismAppShell : MetroWindow
     {
         public PrismAppShell()
         {

@@ -116,7 +116,7 @@
       <Name>Budgeteer</Name>
     </ProjectReference>
     <ProjectReference Include="..\Common\Common.csproj">
-      <Project>{35FCF059-6F59-4921-8F7B-2348D096DFC5}</Project>
+      <Project>{c77ec6f5-f229-4bab-9d8c-52424656c2d7}</Project>
       <Name>Common</Name>
     </ProjectReference>
   </ItemGroup>
