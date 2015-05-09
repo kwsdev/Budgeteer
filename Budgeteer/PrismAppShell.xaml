@@ -14,13 +14,8 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>
 
-        <ContentControl Grid.Row="0" Grid.ColumnSpan="2" prism:RegionManager.RegionName="{x:Static regions:RegionNames.MenuRegion}" />
-        <TabControl Grid.Row="1" Grid.Column="0" prism:RegionManager.RegionName="{x:Static regions:RegionNames.TabRegion}" TabStripPlacement="Left" />
-        <ContentControl Grid.Row="1" Grid.Column="1" prism:RegionManager.RegionName="{x:Static regions:RegionNames.ContentRegion}" />
+        <ContentControl Grid.Row="0" prism:RegionManager.RegionName="{x:Static regions:RegionNames.MenuRegion}" />
+        <TabControl Grid.Row="1" prism:RegionManager.RegionName="{x:Static regions:RegionNames.TabRegion}" TabStripPlacement="Left" />
     </Grid>
 </Controls:MetroWindow>

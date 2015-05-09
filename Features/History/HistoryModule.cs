@@ -19,7 +19,6 @@ namespace Features.History
         public void Initialize()
         {
             _regionManager.AddToRegion(RegionNames.TabRegion, new HistoryTabItemView());
-            _viewRegistry.RegisterViewWithRegion(RegionNames.ContentRegion, typeof (HistoryView));
         }
     }
 }

@@ -19,7 +19,6 @@ namespace Import
         public void Initialize()
         {
             _regionManager.AddToRegion(RegionNames.TabRegion, new ImportTabItemView());
-            _viewRegistry.RegisterViewWithRegion(RegionNames.ContentRegion, typeof (ImportView));
         }
     }
 }

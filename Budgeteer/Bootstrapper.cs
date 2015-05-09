@@ -16,7 +16,7 @@ namespace Budgeteer
     {
         public override void Run(bool runWithDefaultConfiguration)
         {
-            SetupViewModelLocatorConvention();
+            SetupExpectedViewModelNamingConvention();
             ConfigureDependencyInjectionWithViewModelLocator();
 
             base.Run(runWithDefaultConfiguration);
@@ -55,18 +55,17 @@ namespace Budgeteer
 
         private void ConfigureDependencyInjectionWithViewModelLocator()
         {
-            ViewModelLocationProvider.SetDefaultViewModelFactory(type => { return Container.Resolve(type); });
+            ViewModelLocationProvider.SetDefaultViewModelFactory(type => Container.Resolve(type));
         }
 
-        private static void SetupViewModelLocatorConvention()
+        private static void SetupExpectedViewModelNamingConvention()
         {
             ViewModelLocationProvider.SetDefaultViewTypeToViewModelTypeResolver(viewType =>
             {
                 var viewName = viewType.FullName;
                 var shortViewName = viewName.TrimEnd("View");
                 var viewAssemblyName = viewType.GetTypeInfo().Assembly.FullName;
-                var viewModelName = string.Format(CultureInfo.InvariantCulture, "{0}ViewModel, {1}", shortViewName,
-                    viewAssemblyName);
+                var viewModelName = string.Format(CultureInfo.InvariantCulture, "{0}ViewModel, {1}", shortViewName, viewAssemblyName);
                 return Type.GetType(viewModelName);
             });
         }
