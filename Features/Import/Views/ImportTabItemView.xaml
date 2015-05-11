@@ -8,7 +8,7 @@
          prism:ViewModelLocator.AutoWireViewModel="True"
          mc:Ignorable="d">
     <TabItem.Header>
-        <TextBlock Text="Import" />
+        Import
     </TabItem.Header>
     <views:ImportView/>
 </TabItem>

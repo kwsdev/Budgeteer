@@ -1,0 +1,94 @@
+﻿<Domain:AccountHistory xmlns:Domain="clr-namespace:Common.Domain;assembly=Budgeteer.Common" xmlns:Currency="clr-namespace:Common.Domain.Currency;assembly=Budgeteer.Common" xmlns:System="clr-namespace:System;assembly=mscorlib">
+	<Domain:AccountHistory.Entries>
+		<Domain:HistoryEntry Direction="NotSpecified" Date="05/11/2015 22:00:28" Description="Maecenas curabitur">
+			<Domain:HistoryEntry.Amount>
+				<Currency:Money>
+					<Currency:Money.Value>
+						<System:Decimal/>
+					</Currency:Money.Value>
+				</Currency:Money>
+			</Domain:HistoryEntry.Amount>
+		</Domain:HistoryEntry>
+		<Domain:HistoryEntry Direction="Withdrawal" Date="05/11/2015 22:00:28" Description="Vestibulum praesent adipiscing">
+			<Domain:HistoryEntry.Amount>
+				<Currency:Money>
+					<Currency:Money.Value>
+						<System:Decimal/>
+					</Currency:Money.Value>
+				</Currency:Money>
+			</Domain:HistoryEntry.Amount>
+		</Domain:HistoryEntry>
+		<Domain:HistoryEntry Direction="NotSpecified" Date="05/11/2015 22:00:28" Description="Nam phasellus consequat">
+			<Domain:HistoryEntry.Amount>
+				<Currency:Money>
+					<Currency:Money.Value>
+						<System:Decimal/>
+					</Currency:Money.Value>
+				</Currency:Money>
+			</Domain:HistoryEntry.Amount>
+		</Domain:HistoryEntry>
+		<Domain:HistoryEntry Direction="NotSpecified" Date="05/11/2015 22:00:28" Description="Cras accumsan convallis">
+			<Domain:HistoryEntry.Amount>
+				<Currency:Money>
+					<Currency:Money.Value>
+						<System:Decimal/>
+					</Currency:Money.Value>
+				</Currency:Money>
+			</Domain:HistoryEntry.Amount>
+		</Domain:HistoryEntry>
+		<Domain:HistoryEntry Direction="Withdrawal" Date="05/11/2015 22:00:28" Description="Aenean parturient class">
+			<Domain:HistoryEntry.Amount>
+				<Currency:Money>
+					<Currency:Money.Value>
+						<System:Decimal/>
+					</Currency:Money.Value>
+				</Currency:Money>
+			</Domain:HistoryEntry.Amount>
+		</Domain:HistoryEntry>
+		<Domain:HistoryEntry Direction="Deposit" Date="05/11/2015 22:00:28" Description="Bibendum duis">
+			<Domain:HistoryEntry.Amount>
+				<Currency:Money>
+					<Currency:Money.Value>
+						<System:Decimal/>
+					</Currency:Money.Value>
+				</Currency:Money>
+			</Domain:HistoryEntry.Amount>
+		</Domain:HistoryEntry>
+		<Domain:HistoryEntry Direction="NotSpecified" Date="05/11/2015 22:00:28" Description="Dictumst dignissim aliquam">
+			<Domain:HistoryEntry.Amount>
+				<Currency:Money>
+					<Currency:Money.Value>
+						<System:Decimal/>
+					</Currency:Money.Value>
+				</Currency:Money>
+			</Domain:HistoryEntry.Amount>
+		</Domain:HistoryEntry>
+		<Domain:HistoryEntry Direction="Withdrawal" Date="05/11/2015 22:00:28" Description="Nunc eleifend amet">
+			<Domain:HistoryEntry.Amount>
+				<Currency:Money>
+					<Currency:Money.Value>
+						<System:Decimal/>
+					</Currency:Money.Value>
+				</Currency:Money>
+			</Domain:HistoryEntry.Amount>
+		</Domain:HistoryEntry>
+		<Domain:HistoryEntry Direction="Withdrawal" Date="05/11/2015 22:00:28" Description="Curae integer">
+			<Domain:HistoryEntry.Amount>
+				<Currency:Money>
+					<Currency:Money.Value>
+						<System:Decimal/>
+					</Currency:Money.Value>
+				</Currency:Money>
+			</Domain:HistoryEntry.Amount>
+		</Domain:HistoryEntry>
+		<Domain:HistoryEntry Direction="Deposit" Date="05/11/2015 22:00:28" Description="Elementum ante donec">
+			<Domain:HistoryEntry.Amount>
+				<Currency:Money>
+					<Currency:Money.Value>
+						<System:Decimal/>
+					</Currency:Money.Value>
+				</Currency:Money>
+			</Domain:HistoryEntry.Amount>
+		</Domain:HistoryEntry>
+	</Domain:AccountHistory.Entries>
+</Domain:AccountHistory>

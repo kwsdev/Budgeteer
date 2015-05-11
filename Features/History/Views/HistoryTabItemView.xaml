@@ -8,7 +8,7 @@
          prism:ViewModelLocator.AutoWireViewModel="True"
          mc:Ignorable="d">
     <TabItem.Header>
-        <TextBlock Text="Account history" />
+        Account history
     </TabItem.Header>
     <views:HistoryView/>
 </TabItem>

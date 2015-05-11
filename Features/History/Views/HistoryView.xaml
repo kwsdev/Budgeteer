@@ -5,19 +5,19 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:prism="clr-namespace:Microsoft.Practices.Prism.Mvvm;assembly=Microsoft.Practices.Prism.Mvvm.Desktop"
              prism:ViewModelLocator.AutoWireViewModel="True"
-             xmlns:views="clr-namespace:Features.History.Views"
              mc:Ignorable="d"
-             d:DesignHeight="300" d:DesignWidth="900">
-    <!--<UserControl.DataContext>
-        <views:HistoryViewModel />
-    </UserControl.DataContext>-->
+             d:DesignHeight="300" d:DesignWidth="900" d:DataContext="{d:DesignData /SampleData/AccountHistorySampleData.xaml}">
+
     <Grid>
-        <DataGrid ItemsSource="{Binding History.Entries}" AutoGenerateColumns="False">
+        <DataGrid ItemsSource="{Binding Entries}" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Date}" Header="Date" Width="120" />
                 <DataGridTextColumn Binding="{Binding Direction}" Header="Withdrawal/Deposit" Width="175" />
                 <DataGridTextColumn Binding="{Binding Amount.Value}" Header="Amount" Width="100" />
                 <DataGridTextColumn Binding="{Binding Description}" Header="Description" Width="*" />
+                <DataGridTextColumn Binding="{Binding Date}" Header="Date"/>
+                <DataGridTextColumn Binding="{Binding Description}" Header="Description"/>
+                <DataGridTextColumn Binding="{Binding Direction}" Header="Direction"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

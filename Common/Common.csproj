@@ -106,6 +106,7 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DesignMode\DesignModeChecker.cs" />
     <Compile Include="Domain\AccountHistory.cs" />
     <Compile Include="Domain\Currency\Money.cs" />
     <Compile Include="Domain\HistoryEntry.cs" />
@@ -138,6 +139,14 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Page Include="ResourceDictionaryVault\RDBrushes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ResourceDictionaryVault\RDTabItems.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="ResourceDictionaryVault\RDTextblocks.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

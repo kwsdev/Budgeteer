@@ -16,7 +16,7 @@ namespace Budgeteer
     {
         public override void Run(bool runWithDefaultConfiguration)
         {
-            SetupExpectedViewModelNamingConvention();
+            SetupViewModelNamingConvention();
             ConfigureDependencyInjectionWithViewModelLocator();
 
             base.Run(runWithDefaultConfiguration);
@@ -33,13 +33,13 @@ namespace Budgeteer
             ////Current.Dispatcher.Thread.CurrentCulture = culture;
             ////Current.Dispatcher.Thread.CurrentUICulture = culture;            
 
-            return Container.Resolve<PrismAppShell>();
+            return Container.Resolve<PrismAppShellView>();
         }
 
         protected override void InitializeModules()
         {
             base.InitializeModules();
-            Application.Current.MainWindow = (PrismAppShell) Shell;
+            Application.Current.MainWindow = (PrismAppShellView)Shell;
             Application.Current.MainWindow.Show();
         }
 
@@ -58,7 +58,7 @@ namespace Budgeteer
             ViewModelLocationProvider.SetDefaultViewModelFactory(type => Container.Resolve(type));
         }
 
-        private static void SetupExpectedViewModelNamingConvention()
+        private static void SetupViewModelNamingConvention()
         {
             ViewModelLocationProvider.SetDefaultViewTypeToViewModelTypeResolver(viewType =>
             {

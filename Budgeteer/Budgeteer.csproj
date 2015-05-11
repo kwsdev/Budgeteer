@@ -111,15 +111,16 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Bootstrapper.cs" />
-    <Page Include="PrismAppShell.xaml">
+    <Page Include="PrismAppShellView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PrismAppShell.xaml.cs">
-      <DependentUpon>PrismAppShell.xaml</DependentUpon>
+    <Compile Include="PrismAppShellView.xaml.cs">
+      <DependentUpon>PrismAppShellView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PrismAppShellViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
