@@ -1,6 +1,9 @@
-﻿namespace Import.Views
+﻿using PropertyChanged;
+
+namespace Import.Views
 {
-    internal class ImportViewModel
+    [ImplementPropertyChanged]
+    public class ImportViewModel
     {
     }
 }
