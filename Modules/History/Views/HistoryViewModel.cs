@@ -1,7 +1,7 @@
 ﻿using Common.Domain;
 using Microsoft.Practices.Prism.Mvvm;
 
-namespace Features.History.Views
+namespace Modules.History.Views
 {
     public class HistoryViewModel : BindableBase
     {

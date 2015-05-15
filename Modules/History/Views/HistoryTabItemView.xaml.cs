@@ -1,7 +1,7 @@
 ﻿using System.Windows.Controls;
 using Microsoft.Practices.Prism.Mvvm;
 
-namespace Features.History.Views
+namespace Modules.History.Views
 {
     /// <summary>
     ///     Interaction logic for HistoryTabItemView.xaml

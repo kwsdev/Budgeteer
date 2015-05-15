@@ -7,8 +7,8 @@
     <ProjectGuid>{2A362FF5-C990-476E-982D-81E038394CF8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Features.History</RootNamespace>
-    <AssemblyName>Budgeteer.Features.History</AssemblyName>
+    <RootNamespace>Modules.History</RootNamespace>
+    <AssemblyName>Budgeteer.Modules.History</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>

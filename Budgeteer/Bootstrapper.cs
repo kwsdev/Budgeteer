@@ -3,7 +3,7 @@ using System.Globalization;
 using System.Reflection;
 using System.Windows;
 using Common.ExtensionMethods;
-using Features.History;
+using Modules.History;
 using Import;
 using Microsoft.Practices.Prism.Modularity;
 using Microsoft.Practices.Prism.Mvvm;

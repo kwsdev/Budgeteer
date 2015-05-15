@@ -1,9 +1,9 @@
 ﻿using Common.Regions;
-using Features.History.Views;
+using Modules.History.Views;
 using Microsoft.Practices.Prism.Modularity;
 using Microsoft.Practices.Prism.Regions;
 
-namespace Features.History
+namespace Modules.History
 {
     public class HistoryModule : IModule
     {

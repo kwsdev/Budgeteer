@@ -1,5 +1,5 @@
 ﻿using Common.Regions;
-using Import.Views;
+using Modules.Import.Views;
 using Microsoft.Practices.Prism.Modularity;
 using Microsoft.Practices.Prism.Regions;
 
