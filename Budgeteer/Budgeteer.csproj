@@ -117,12 +117,27 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Bootstrapper.cs" />
+    <Page Include="Intro\CreateOrOpenView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Intro\CreateOrOpenViewTabItemView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="PrismAppShellView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Intro\CreateOrOpenView.xaml.cs">
+      <DependentUpon>CreateOrOpenView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Intro\CreateOrOpenViewModel.cs" />
+    <Compile Include="Intro\CreateOrOpenViewTabItemView.xaml.cs">
+      <DependentUpon>CreateOrOpenViewTabItemView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PrismAppShellView.xaml.cs">
       <DependentUpon>PrismAppShellView.xaml</DependentUpon>
     </Compile>

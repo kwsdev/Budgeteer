@@ -1,0 +1,79 @@
+﻿<UserControl x:Class="Budgeteer.Intro.CreateOrOpenView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mvvm="clr-namespace:Microsoft.Practices.Prism.Mvvm;assembly=Microsoft.Practices.Prism.Mvvm.Desktop"
+             mvvm:ViewModelLocator.AutoWireViewModel="True"
+             Background="{DynamicResource ApplicationBackgroundBrush}"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="800" d:DataContext="{d:DesignData}">
+    <UserControl.Resources>
+        <Style x:Key="IntroRadioButtonStyle" TargetType="RadioButton" BasedOn="{StaticResource {x:Type ToggleButton}}">
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        </Style>
+
+        <Style x:Key="IntroTextBlockStyle" TargetType="TextBlock">
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Width" Value="180"/>
+        </Style>
+
+        <Style x:Key="IntroTextBoxStyle" TargetType="TextBox">
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Left"></Setter>
+            <Setter Property="Width" Value="344"></Setter>
+        </Style>
+
+        <Style x:Key="CreateOrOpenGridStyle" TargetType="Grid">
+            <Setter Property="Width" Value="600"/>
+        </Style>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center">
+            <RadioButton x:Name="CreateButton" 
+                         Content="Create a new budget"  
+                         IsChecked="{Binding ShowCreatePanel}"
+                         GroupName="CreateOrOpen"
+                         Style="{StaticResource IntroRadioButtonStyle}">
+            </RadioButton>
+            <RadioButton x:Name="OpenButton" 
+                         Content="Open an existing budget" 
+                         IsChecked="{Binding ShowOpenPanel}"
+                         GroupName="CreateOrOpen"
+                         Style="{StaticResource IntroRadioButtonStyle}">
+            </RadioButton>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Width="600" VerticalAlignment="Top">
+            <Grid Visibility="{Binding ShowCreatePanel, Converter={StaticResource BooleanToVisibilityConverter}}" 
+                  Style="{StaticResource CreateOrOpenGridStyle}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Give the new budget a name: " Style="{StaticResource IntroTextBlockStyle}"/>
+                <TextBox Text="{Binding BudgetName}" Style="{StaticResource IntroTextBoxStyle}" Grid.Column="1"/>
+            </Grid>
+            <Grid Style="{StaticResource CreateOrOpenGridStyle}"
+                  Visibility="{Binding ShowOpenPanel, Converter={StaticResource BooleanToVisibilityConverter}}" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Open an existing budget: " Style="{StaticResource IntroTextBlockStyle}"/>
+                <TextBox Text="{Binding ExistingBudgetPath}" Style="{StaticResource IntroTextBoxStyle}" Grid.Column="1"/>
+                <Button Content="Browse..." Style="{DynamicResource BrowseButtonStyle}" Grid.Column="2"/>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</UserControl>

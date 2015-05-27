@@ -10,7 +10,8 @@
         mvvm:ViewModelLocator.AutoWireViewModel="True"
         mc:Ignorable="d"
         d:DesignHeight="200" d:DesignWidth="800"
-        Title="Budgeteer" Height="800" Width="1500">
+        Title="Budgeteer" Height="800" Width="1500"
+        Background="{DynamicResource ApplicationBackgroundBrush}">
 
     <Grid>
         <Grid.RowDefinitions>

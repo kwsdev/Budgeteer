@@ -9,5 +9,6 @@
         <ResourceDictionary Source="../RDTextblocks.xaml" />
         <ResourceDictionary Source="../RDTabItems.xaml" />
         <ResourceDictionary Source="../RDBrushes.xaml" />
+        <ResourceDictionary Source="../RDButtons.xaml" />
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

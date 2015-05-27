@@ -2,11 +2,14 @@
 using System.Globalization;
 using System.Reflection;
 using System.Windows;
+using Budgeteer.Intro;
 using Common.ExtensionMethods;
+using Common.Regions;
 using Modules.History;
 using Import;
 using Microsoft.Practices.Prism.Modularity;
 using Microsoft.Practices.Prism.Mvvm;
+using Microsoft.Practices.Prism.Regions;
 using Microsoft.Practices.Prism.UnityExtensions;
 using Microsoft.Practices.Unity;
 
@@ -68,6 +71,13 @@ namespace Budgeteer
                 var viewModelName = string.Format(CultureInfo.InvariantCulture, "{0}ViewModel, {1}", shortViewName, viewAssemblyName);
                 return Type.GetType(viewModelName);
             });
+        }
+
+        protected override void InitializeShell()
+        {
+            base.InitializeShell();
+            var regionManager = this.Container.Resolve<IRegionManager>();
+            regionManager.AddToRegion(RegionNames.TabRegion, new CreateOrOpenViewTabItemView());
         }
     }
 }
