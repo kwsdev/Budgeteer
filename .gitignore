@@ -3,3 +3,8 @@ Budgeteer/bin/
 packages/
 Budgeteer.mspec/bin/
 Budgeteer.mspec/obj/
+Modules/History/obj/
+Modules/Import/obj/
+Common/obj/
+BankModules/SparebankenSor/obj/
+BankModules/SparebankenSor.Mspec/obj/
