@@ -8,3 +8,8 @@ Modules/Import/obj/
 Common/obj/
 BankModules/SparebankenSor/obj/
 BankModules/SparebankenSor.Mspec/obj/
+Common/bin/
+Modules/History/bin/
+Modules/Import/bin/
+BankModules/SparebankenSor/bin/
+BankModules/SparebankenSor.Mspec/bin/
