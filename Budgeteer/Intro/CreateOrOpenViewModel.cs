@@ -7,7 +7,6 @@ using PropertyChanged;
 
 namespace Budgeteer.Intro
 {
-    [ImplementPropertyChanged]
     public class CreateOrOpenViewModel
     {
         public string BudgetName { get; set; }
