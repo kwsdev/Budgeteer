@@ -7,5 +7,7 @@
              mvvm:ViewModelLocator.AutoWireViewModel="True"
              mc:Ignorable="d"
              d:DesignHeight="300" d:DesignWidth="300">
-    <Grid />
+    <Grid>
+        <Button Content="Import..." Width="100" Height="30" Command="{Binding ImportCommand}"/>
+    </Grid>
 </UserControl>

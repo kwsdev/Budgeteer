@@ -28,13 +28,20 @@ namespace GjensidigeBank.Import
 
         private AccountHistory BuildAccountHistoryFromFile(string path)
         {
-            var reader = new StreamReader(File.OpenRead(path));
+            var reader = new StreamReader(File.OpenRead(path), Encoding.GetEncoding(1252));
 
             var accountHistory = new AccountHistory(new InternalAccount(new AccountId("id"), new AccountNumber("1231"), new Person("name")));
 
+            var isHeaderLine = false;
             while (!reader.EndOfStream)
             {
                 var line = reader.ReadLine();
+
+                if (!isHeaderLine)
+                {
+                    isHeaderLine = true;
+                    continue;
+                }
 
                 accountHistory.Entries.Add(BuildHistoryEntry(line));
             }
@@ -44,19 +51,28 @@ namespace GjensidigeBank.Import
 
         private HistoryEntry BuildHistoryEntry(string line)
         {
-            var values = line.Split(';');
+            var values = line.Split(',');
 
-            var date = _dateParser.ParseDate(values[0]);
-            var description = values[1];
-            var direction = _directionParser.ParseDirection(values[2], values[3]);
-            var amount = _moneyParser.ParseMoney(direction == TransferDirection.Withdrawal ? values[2] : values[3]);
+            var logDate = _dateParser.ParseDate(values[0]);
+            var date = _dateParser.ParseDate(values[1]);
+            var code = values[2];
+            var description = values[3];
+            var amount = _moneyParser.ParseMoney(values[4]);
+            var direction = amount.Value > 0 ? TransferDirection.Deposit : TransferDirection.Withdrawal;
+            var archiveRef = values[5];
+            var externalAccountRef = values[6];
+            var externalAccountId = values[7];
 
             var entry = new HistoryEntry
             {
+                LogDate = logDate,
                 Date = date,
                 Description = description,
                 Direction = direction,
-                Amount = amount
+                Amount = amount,
+                Code = code,
+                ArchiveRef = archiveRef,
+                ExternalAccount = new ExternalAccount(new AccountId(externalAccountRef), new AccountNumber(externalAccountId)),
             };
 
             return entry;

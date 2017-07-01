@@ -5,6 +5,10 @@ namespace Common.Domain
 {
     public class HistoryEntry
     {
+        public DateTime LogDate { get; set; }
+
+        public string ArchiveRef { get; set; }
+
         public DateTime Date { get; set; }
 
         public string Code { get; set; }
