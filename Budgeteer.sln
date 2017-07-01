@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Budgeteer", "Budgeteer\Budgeteer.csproj", "{FC2707BE-98B7-498F-A66E-E76C65F3C8C3}"
 EndProject
@@ -20,6 +20,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Import", "Modules\Import\Import.csproj", "{5A3D2F5B-0227-46E5-8811-F1DB7544030D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{C77EC6F5-F229-4BAB-9D8C-52424656C2D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GjensidigeBank", "BankModules\GjensidigeBank\GjensidigeBank.csproj", "{A2A23836-EBE0-4EA6-B43C-14FB9AB57D77}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,6 +57,10 @@ Global
 		{C77EC6F5-F229-4BAB-9D8C-52424656C2D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C77EC6F5-F229-4BAB-9D8C-52424656C2D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C77EC6F5-F229-4BAB-9D8C-52424656C2D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2A23836-EBE0-4EA6-B43C-14FB9AB57D77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2A23836-EBE0-4EA6-B43C-14FB9AB57D77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2A23836-EBE0-4EA6-B43C-14FB9AB57D77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2A23836-EBE0-4EA6-B43C-14FB9AB57D77}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -64,5 +70,6 @@ Global
 		{40454DE0-F9A4-4310-91DE-D31CD9AEB09E} = {17B6683D-DA66-47FB-B1F3-13BB9B9894F0}
 		{2A362FF5-C990-476E-982D-81E038394CF8} = {BDA8DD0A-0349-4257-BA5D-8B4BCDF53AA2}
 		{5A3D2F5B-0227-46E5-8811-F1DB7544030D} = {BDA8DD0A-0349-4257-BA5D-8B4BCDF53AA2}
+		{A2A23836-EBE0-4EA6-B43C-14FB9AB57D77} = {17B6683D-DA66-47FB-B1F3-13BB9B9894F0}
 	EndGlobalSection
 EndGlobal

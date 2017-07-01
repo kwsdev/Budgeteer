@@ -10,8 +10,8 @@ using Common.Regions;
 using Modules.History;
 using Import;
 using Microsoft.Practices.Unity;
+using Prism.Modularity;
 using Prism.Mvvm;
-using Prism.Regions;
 using Prism.Unity;
 
 namespace Budgeteer
@@ -26,21 +26,8 @@ namespace Budgeteer
             base.Run(runWithDefaultConfiguration);
         }
 
-        protected override Microsoft.Practices.Unity.IUnityContainer CreateContainer()
-        {
-            var container = new UnityContainer();
-
-            container.RegisterType<IRegionViewRegistry, RegionViewRegistry>();
-
-            return container;
-        }
-
         protected override DependencyObject CreateShell()
         {
-            ////var culture = new CultureInfo("nb-NO");
-            ////Current.Dispatcher.Thread.CurrentCulture = culture;
-            ////Current.Dispatcher.Thread.CurrentUICulture = culture;            
-
             return Container.Resolve<PrismAppShellView>();
         }
 
@@ -55,7 +42,7 @@ namespace Budgeteer
         {
             base.ConfigureModuleCatalog();
 
-            var moduleCatalog = (Prism.Modularity.ModuleCatalog)ModuleCatalog;
+            var moduleCatalog = (ModuleCatalog)ModuleCatalog;
 
             moduleCatalog.AddModule(typeof(HistoryModule));
             moduleCatalog.AddModule(typeof(ImportModule));

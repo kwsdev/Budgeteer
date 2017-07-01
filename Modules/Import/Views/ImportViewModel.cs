@@ -1,4 +1,5 @@
-﻿using PropertyChanged;
+﻿using System.Collections.Generic;
+using PropertyChanged;
 
 namespace Modules.Import.Views
 {

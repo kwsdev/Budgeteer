@@ -1,0 +1,8 @@
+C:\projects\Budgeteer\BankModules\GjensidigeBank\obj\Debug\GjensidigeBank.csprojResolveAssemblyReference.cache
+C:\projects\Budgeteer\BankModules\GjensidigeBank\bin\Debug\GjensidigeBank.dll
+C:\projects\Budgeteer\BankModules\GjensidigeBank\bin\Debug\GjensidigeBank.pdb
+C:\projects\Budgeteer\BankModules\GjensidigeBank\bin\Debug\Budgeteer.Common.dll
+C:\projects\Budgeteer\BankModules\GjensidigeBank\bin\Debug\Budgeteer.Common.pdb
+C:\projects\Budgeteer\BankModules\GjensidigeBank\bin\Debug\Budgeteer.Common.dll.config
+C:\projects\Budgeteer\BankModules\GjensidigeBank\obj\Debug\GjensidigeBank.dll
+C:\projects\Budgeteer\BankModules\GjensidigeBank\obj\Debug\GjensidigeBank.pdb
