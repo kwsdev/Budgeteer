@@ -1,6 +1,6 @@
 ﻿using System;
+using BankModules.SparebankenSor.Import;
 using Machine.Specifications;
-using SparebankenSor.Import.Parsers;
 
 namespace SparebankenSor.Mspec.Import.Parsers.for_DateParser.given
 {

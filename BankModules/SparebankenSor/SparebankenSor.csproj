@@ -88,10 +88,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Import\Importers\CSVImporter.cs" />
-    <Compile Include="Import\Parsers\DateParser.cs" />
-    <Compile Include="Import\Parsers\DirectionParser.cs" />
-    <Compile Include="Import\Parsers\MoneyParser.cs" />
+    <Compile Include="Import\CSVImporter.cs" />
+    <Compile Include="Import\DateParser.cs" />
+    <Compile Include="Import\DirectionParser.cs" />
+    <Compile Include="Import\MoneyParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SparebankenSorModule.cs" />
   </ItemGroup>

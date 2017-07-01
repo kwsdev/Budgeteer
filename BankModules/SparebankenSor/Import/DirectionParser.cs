@@ -1,6 +1,6 @@
 using Common.Domain;
 
-namespace SparebankenSor.Import.Parsers
+namespace BankModules.SparebankenSor.Import
 {
     public class DirectionParser
     {

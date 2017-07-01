@@ -1,6 +1,6 @@
-﻿using Common.Domain.Currency;
+﻿using BankModules.SparebankenSor.Import;
+using Common.Domain.Currency;
 using Machine.Specifications;
-using SparebankenSor.Import.Parsers;
 
 namespace SparebankenSor.Mspec.Import.Parsers.for_MoneyParser.given
 {

@@ -1,8 +1,7 @@
 ﻿using System.IO;
 using Common.Domain;
-using SparebankenSor.Import.Parsers;
 
-namespace SparebankenSor.Import.Importers
+namespace BankModules.SparebankenSor.Import
 {
     public class CsvImporter
     {

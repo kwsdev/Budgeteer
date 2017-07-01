@@ -1,6 +1,6 @@
 using Common.Domain.Currency;
 
-namespace SparebankenSor.Import.Parsers
+namespace BankModules.SparebankenSor.Import
 {
     public class MoneyParser
     {
