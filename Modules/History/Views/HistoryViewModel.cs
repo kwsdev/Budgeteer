@@ -1,5 +1,5 @@
 ﻿using Common.Domain;
-using Microsoft.Practices.Prism.Mvvm;
+using Prism.Mvvm;
 
 namespace Modules.History.Views
 {
@@ -9,7 +9,7 @@ namespace Modules.History.Views
 
         public AccountHistory History
         {
-            get { return _history; }
+            get => _history;
 
 
             private set
@@ -20,7 +20,7 @@ namespace Modules.History.Views
                 }
 
                 _history = value;
-                OnPropertyChanged(() => History);
+                RaisePropertyChanged();
             }
         }
 

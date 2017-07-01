@@ -1,17 +1,18 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Globalization;
 using System.Reflection;
 using System.Windows;
+using System.Windows.Controls;
 using Budgeteer.Intro;
 using Common.ExtensionMethods;
 using Common.Regions;
 using Modules.History;
 using Import;
-using Microsoft.Practices.Prism.Modularity;
-using Microsoft.Practices.Prism.Mvvm;
-using Microsoft.Practices.Prism.Regions;
-using Microsoft.Practices.Prism.UnityExtensions;
 using Microsoft.Practices.Unity;
+using Prism.Mvvm;
+using Prism.Regions;
+using Prism.Unity;
 
 namespace Budgeteer
 {
@@ -25,9 +26,13 @@ namespace Budgeteer
             base.Run(runWithDefaultConfiguration);
         }
 
-        protected override IUnityContainer CreateContainer()
+        protected override Microsoft.Practices.Unity.IUnityContainer CreateContainer()
         {
-            return new UnityContainer();
+            var container = new UnityContainer();
+
+            container.RegisterType<IRegionViewRegistry, RegionViewRegistry>();
+
+            return container;
         }
 
         protected override DependencyObject CreateShell()
@@ -50,10 +55,10 @@ namespace Budgeteer
         {
             base.ConfigureModuleCatalog();
 
-            var moduleCatalog = (ModuleCatalog) ModuleCatalog;
+            var moduleCatalog = (Prism.Modularity.ModuleCatalog)ModuleCatalog;
 
-            moduleCatalog.AddModule(typeof (HistoryModule));
-            moduleCatalog.AddModule(typeof (ImportModule));
+            moduleCatalog.AddModule(typeof(HistoryModule));
+            moduleCatalog.AddModule(typeof(ImportModule));
         }
 
         private void ConfigureDependencyInjectionWithViewModelLocator()
@@ -76,7 +81,7 @@ namespace Budgeteer
         protected override void InitializeShell()
         {
             base.InitializeShell();
-            var regionManager = this.Container.Resolve<IRegionManager>();
+            var regionManager = this.Container.Resolve<Prism.Regions.RegionManager>();
             regionManager.AddToRegion(RegionNames.TabRegion, new CreateOrOpenViewTabItemView());
         }
     }

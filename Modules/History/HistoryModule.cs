@@ -1,7 +1,7 @@
 ﻿using Common.Regions;
 using Modules.History.Views;
-using Microsoft.Practices.Prism.Modularity;
-using Microsoft.Practices.Prism.Regions;
+using Prism.Modularity;
+using Prism.Regions;
 
 namespace Modules.History
 {
