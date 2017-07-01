@@ -1,4 +1,6 @@
-﻿<Domain:AccountHistory xmlns:Domain="clr-namespace:Common.Domain;assembly=Budgeteer.Common" xmlns:Currency="clr-namespace:Common.Domain.Currency;assembly=Budgeteer.Common" xmlns:System="clr-namespace:System;assembly=mscorlib">
+﻿<Domain:AccountHistory xmlns:Domain="clr-namespace:Common.Domain;assembly=Budgeteer.Common" 
+                       xmlns:Currency="clr-namespace:Common.Domain.Currency;assembly=Budgeteer.Common" 
+                       xmlns:System="clr-namespace:System;assembly=mscorlib">
 	<Domain:AccountHistory.Entries>
 		<Domain:HistoryEntry Direction="NotSpecified" Date="05/11/2015 22:00:28" Description="Maecenas curabitur">
 			<Domain:HistoryEntry.Amount>

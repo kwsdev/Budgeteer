@@ -7,7 +7,7 @@ namespace Modules.History.Views
     {
         private AccountHistory _history;
 
-        public AccountHistory History
+        public AccountHistory Entries
         {
             get => _history;
 
@@ -26,7 +26,7 @@ namespace Modules.History.Views
 
         public void Load(AccountHistory history)
         {
-            History = history;
+            Entries = history;
         }
     }
 }
