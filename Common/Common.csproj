@@ -102,9 +102,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DesignMode\DesignModeChecker.cs" />
+    <Compile Include="Domain\Account.cs" />
     <Compile Include="Domain\AccountHistory.cs" />
+    <Compile Include="Domain\AccountId.cs" />
+    <Compile Include="Domain\AccountNumber.cs" />
     <Compile Include="Domain\Currency\Money.cs" />
+    <Compile Include="Domain\ExternalAccount.cs" />
     <Compile Include="Domain\HistoryEntry.cs" />
+    <Compile Include="Domain\InternalAccount.cs" />
+    <Compile Include="Domain\Person.cs" />
     <Compile Include="Domain\TransferDirection.cs" />
     <Compile Include="ExtensionMethods\StringExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">

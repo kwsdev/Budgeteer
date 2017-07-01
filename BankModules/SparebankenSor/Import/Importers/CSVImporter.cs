@@ -26,7 +26,7 @@ namespace SparebankenSor.Import.Importers
         {
             var reader = new StreamReader(File.OpenRead(path));
 
-            var accountHistory = new AccountHistory();
+            var accountHistory = new AccountHistory(new InternalAccount(new AccountId("id"), new AccountNumber("1231"), new Person("name")));
 
             while (!reader.EndOfStream)
             {

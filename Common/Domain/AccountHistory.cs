@@ -4,11 +4,15 @@ namespace Common.Domain
 {
     public class AccountHistory
     {
-        private ObservableCollection<HistoryEntry> entries;
+        private ObservableCollection<HistoryEntry> _entries;
 
-        public ObservableCollection<HistoryEntry> Entries
+        public AccountHistory(InternalAccount account)
         {
-            get { return entries ?? (entries = new ObservableCollection<HistoryEntry>()); }
+            Account = account;
         }
+
+        public InternalAccount Account { get; }
+
+        public ObservableCollection<HistoryEntry> Entries => _entries ?? (_entries = new ObservableCollection<HistoryEntry>());
     }
 }
