@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.ObjectModel;
 using System.Linq;
 using Common.Domain;
 using Prism.Mvvm;
@@ -8,7 +9,6 @@ namespace Modules.History.Views
     public class HistoryViewModel : BindableBase
     {
         private readonly HistoryRegistry _registry;
-        private AccountHistory _history;
 
         public HistoryViewModel(HistoryRegistry registry)
         {
@@ -21,26 +21,11 @@ namespace Modules.History.Views
             this.Load(_registry.AccountHistories.First());
         }
 
-        public AccountHistory Entries
-        {
-            get => _history;
-
-
-            private set
-            {
-                if (_history == value)
-                {
-                    return;
-                }
-
-                _history = value;
-                RaisePropertyChanged();
-            }
-        }
+        public ObservableCollection<HistoryEntry> Entries { get; private set; }
 
         public void Load(AccountHistory history)
         {
-            Entries = history;
+           Entries = new ObservableCollection<HistoryEntry>(history.Entries);
         }
     }
 }
