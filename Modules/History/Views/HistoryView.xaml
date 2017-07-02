@@ -11,13 +11,12 @@
     <Grid>
         <DataGrid ItemsSource="{Binding Entries}" AutoGenerateColumns="False">
             <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding LogDate}" Header="LogDate" Width="120" />
                 <DataGridTextColumn Binding="{Binding Date}" Header="Date" Width="120" />
+                <DataGridTextColumn Binding="{Binding Code}" Header="Code" Width="70"/>
+                <DataGridTextColumn Binding="{Binding Description}" Header="Description" Width="*" />
                 <DataGridTextColumn Binding="{Binding Direction}" Header="Withdrawal/Deposit" Width="175" />
                 <DataGridTextColumn Binding="{Binding Amount.Value}" Header="Amount" Width="100" />
-                <DataGridTextColumn Binding="{Binding Description}" Header="Description" Width="*" />
-                <DataGridTextColumn Binding="{Binding Date}" Header="Date"/>
-                <DataGridTextColumn Binding="{Binding Description}" Header="Description"/>
-                <DataGridTextColumn Binding="{Binding Direction}" Header="Direction"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

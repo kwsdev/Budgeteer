@@ -19,7 +19,7 @@
         </Grid.RowDefinitions>
 
         <ContentControl Grid.Row="0" prism:RegionManager.RegionName="{x:Static regions:RegionNames.MenuRegion}" Margin="0,-3,0,3" />
-        <TabControl Grid.Row="1" x:Name="TabControl"
+        <TabControl Grid.Row="1" x:Name="TabControl" SelectedIndex="2"
                     prism:RegionManager.RegionName="{x:Static regions:RegionNames.TabRegion}" 
                     TabStripPlacement="Left" 
                     ItemContainerStyle="{StaticResource NavigationMenuTabItemStyle}">

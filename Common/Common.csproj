@@ -97,6 +97,9 @@
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
+    <Reference Include="WeakEvent, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ThomasLevesque.WeakEvent.1.0.1\lib\dotnet\WeakEvent.dll</HintPath>
+    </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -110,6 +113,8 @@
     <Compile Include="Domain\Currency\Money.cs" />
     <Compile Include="Domain\ExternalAccount.cs" />
     <Compile Include="Domain\HistoryEntry.cs" />
+    <Compile Include="Domain\HistoryRegistry.cs" />
+    <Compile Include="Domain\IHistoryRegistry.cs" />
     <Compile Include="Domain\InternalAccount.cs" />
     <Compile Include="Domain\Person.cs" />
     <Compile Include="Domain\TransferDirection.cs" />

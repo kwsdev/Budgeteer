@@ -5,6 +5,7 @@ using System.Reflection;
 using System.Windows;
 using System.Windows.Controls;
 using Budgeteer.Intro;
+using Common.Domain;
 using Common.ExtensionMethods;
 using Common.Regions;
 using Modules.History;
@@ -12,6 +13,7 @@ using Import;
 using Microsoft.Practices.Unity;
 using Prism.Modularity;
 using Prism.Mvvm;
+using Prism.Regions.Behaviors;
 using Prism.Unity;
 
 namespace Budgeteer
@@ -70,6 +72,8 @@ namespace Budgeteer
             base.InitializeShell();
             var regionManager = this.Container.Resolve<Prism.Regions.RegionManager>();
             regionManager.AddToRegion(RegionNames.TabRegion, new CreateOrOpenViewTabItemView());
+
+            Container.RegisterType<IHistoryRegistry, HistoryRegistry>(new ContainerControlledLifetimeManager());
         }
     }
 }

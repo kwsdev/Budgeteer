@@ -13,19 +13,21 @@ namespace Modules.Import.Views
     public class ImportViewModel
     {
         private readonly CsvImporter _csvImporter;
+        private readonly IHistoryRegistry _historyRegistry;
 
-        public ImportViewModel(CsvImporter csvImporter)
+        public ImportViewModel(CsvImporter csvImporter, IHistoryRegistry historyRegistry)
         {
             _csvImporter = csvImporter;
+            _historyRegistry = historyRegistry;
             this.ImportCommand = new DelegateCommand(OpenSelectFileDialog);
         }
 
         private void OpenSelectFileDialog()
         {
 #if DEBUG
-            this.ImportTransactions(UseHardcodedPath());
+            _historyRegistry.Register(this.ImportTransactions(UseHardcodedPath()));
 #else
-            this.ImportTransactiosn(SelectTextFile());
+            _historyRegistry.Register(this.ImportTransactiosn(SelectTextFile()));
 #endif
         }
 

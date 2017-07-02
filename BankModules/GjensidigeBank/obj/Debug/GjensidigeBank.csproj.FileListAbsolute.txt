@@ -6,3 +6,5 @@ C:\projects\Budgeteer\BankModules\GjensidigeBank\bin\Debug\Budgeteer.Common.pdb
 C:\projects\Budgeteer\BankModules\GjensidigeBank\bin\Debug\Budgeteer.Common.dll.config
 C:\projects\Budgeteer\BankModules\GjensidigeBank\obj\Debug\GjensidigeBank.dll
 C:\projects\Budgeteer\BankModules\GjensidigeBank\obj\Debug\GjensidigeBank.pdb
+C:\projects\Budgeteer\BankModules\GjensidigeBank\bin\Debug\GjensidigeBank.dll.config
+C:\projects\Budgeteer\BankModules\GjensidigeBank\bin\Debug\WeakEvent.dll
