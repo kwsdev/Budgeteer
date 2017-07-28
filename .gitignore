@@ -13,3 +13,6 @@ Modules/History/bin/
 Modules/Import/bin/
 BankModules/SparebankenSor/bin/
 BankModules/SparebankenSor.Mspec/bin/
+BankModules/GjensidigeBank/bin/
+BankModules/GjensidigeBank/obj/
+.vs/
