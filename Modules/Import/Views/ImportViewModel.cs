@@ -44,7 +44,7 @@ namespace Modules.Import.Views
 
         public string UseHardcodedPath()
         {
-            return "C:\\Users\\k\\Documents\\transaksjoner-1.csv";
+            return "..\\..\\..\\transaksjoner.csv";
         }
 
         public ICommand ImportCommand { get; }
