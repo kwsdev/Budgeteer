@@ -11,8 +11,8 @@
     <Grid>
         <DataGrid ItemsSource="{Binding Entries}" AutoGenerateColumns="False">
             <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding LogDate}" Header="LogDate" Width="120" />
-                <DataGridTextColumn Binding="{Binding Date}" Header="Date" Width="120" />
+                <DataGridTextColumn Binding="{Binding LogDate, StringFormat=d}" Header="LogDate" Width="120" />
+                <DataGridTextColumn Binding="{Binding Date, StringFormat=d}" Header="Date" Width="120" />
                 <DataGridTextColumn Binding="{Binding Code}" Header="Code" Width="70"/>
                 <DataGridTextColumn Binding="{Binding Description}" Header="Description" Width="*" />
                 <DataGridTextColumn Binding="{Binding Direction}" Header="Withdrawal/Deposit" Width="175" />
